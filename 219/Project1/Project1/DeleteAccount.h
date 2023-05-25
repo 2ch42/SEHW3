@@ -2,13 +2,13 @@
 #include <string>
 #include "Account.h"
 
-//È¸¿ø Å»Åğ ±â´É¿¡ ´ëÇÑ Boundary class
+//íšŒì› íƒˆí‡´ ê¸°ëŠ¥ì— ëŒ€í•œ Boundary class
 class DeleteAccountUI{
   public:
     void requestDelete();
 };
 
-//È¸¿ø Å»Åğ ±â´É¿¡ ´ëÇÑ Control class
+//íšŒì› íƒˆí‡´ ê¸°ëŠ¥ì— ëŒ€í•œ Control class
 class DeleteAccount{
   public:
     static string removeAccount();

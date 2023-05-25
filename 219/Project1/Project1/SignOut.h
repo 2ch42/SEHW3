@@ -2,13 +2,13 @@
 
 using namespace std;
 
-// ·Î±×¾Æ¿ô ±â´É¿¡ ´ëÇÑ Boundary class
+// ë¡œê·¸ì•„ì›ƒ ê¸°ëŠ¥ì— ëŒ€í•œ Boundary class
 class SignOutUI{
   public:
     void requestSignOut();
 };
 
-// ·Î±×¾Æ¿ô ±â´É¿¡ ´ëÇÑ Control class
+// ë¡œê·¸ì•„ì›ƒ ê¸°ëŠ¥ì— ëŒ€í•œ Control class
 class SignOut{
   public:
     static string disconnectAccount();

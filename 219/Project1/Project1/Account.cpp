@@ -5,11 +5,11 @@
 
 using namespace std;
 
-vector<Account*> Account::accountList(0, nullptr);  // µî·ÏµÈ °èÁ¤µé¿¡ ´ëÇÑ ÂüÁ¶°ªÀ» °®´Â static vector Æ÷ÀÎÅÍ ¹è¿­ÀÇ ÃÊ±âÈ­.
-Account* Account::nowActiveAccount = NULL;      // ÇöÀç ·Î±×ÀÎ ÁßÀÎ °èÁ¤ÀÇ ÂüÁ¶°ªÀ» °®´Â static Æ÷ÀÎÅÍ º¯¼öÀÇ ÃÊ±âÈ­.
+vector<Account*> Account::accountList(0, nullptr);  // ë“±ë¡ëœ ê³„ì •ë“¤ì— ëŒ€í•œ ì°¸ì¡°ê°’ì„ ê°–ëŠ” static vector í¬ì¸í„° ë°°ì—´ì˜ ì´ˆê¸°í™”
+Account* Account::nowActiveAccount = NULL;      // ë¡œê·¸ì¸ ì¤‘ì¸ ê³„ì •ì˜ ì°¸ì¡°ê°’ì„ ê°–ëŠ” static í¬ì¸í„° ë³€ìˆ˜ ì´ˆê¸°í™”
 
 
-// super classÀÇ »ı¼ºÀÚ
+// super class ìƒì„±ì
 Account::Account(string userID, string password){
   this->userID = userID;
   this->password = password;
@@ -23,7 +23,7 @@ string Account::getPassword(){
   return this->password;
 }
 
-//·Î±×ÀÎ ½Ã,  µî·ÏµÈ °èÁ¤µéÀÇ ÂüÁ¶°ªÀ» °®´Â vector ¹è¿­¿¡¼­ µî·ÏµÈ °èÁ¤ÀÌ ¸Â´Â Áö È®ÀÎ ÈÄ true or false¸¦ ¹İÈ¯ÇÏ´Â ÇÔ¼ö. 
+//ë¡œê·¸ì¸ ì‹œ, ë“±ë¡ëœ ê³„ì •ë“¤ì˜ ì°¸ì¡°ê°’ì„ ê°–ëŠ” ë°°ì—´ì—ì„œ ë“±ë¡ëœ ê³„ì •ì´ ë§ëŠ” ì§€ í™•ì¸ í›„ ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜.
 bool Account::signIn(string userID, string password){
   for(int i=0; i<accountList.size(); i++){
     if(accountList[i]->getUserID() == userID && accountList[i]->getPassword() == password){
@@ -34,12 +34,12 @@ bool Account::signIn(string userID, string password){
   return false;
 }
 
-// È¸¿ø °¡ÀÔ ½Ã, °èÁ¤ ¸®½ºÆ®¿¡ »õ·Î »ı¼ºµÈ °èÁ¤ÀÇ ÂüÁ¶°ª Ãß°¡.
+// íšŒì› ê°€ì… ì‹œ, ë¦¬ìŠ¤íŠ¸ì— ìƒˆë¡œ ìƒì„±ëœ ê³„ì •ì˜ ì°¸ì¡°ê°’ ì¶”ê°€,
 void Account::addAccount(Account* newAccount){
   accountList.push_back(newAccount);
 }
 
-// È¸¿ø Å»Åğ ½Ã, ÇöÀç ·Î±×ÀÎ ÁßÀÎ °èÁ¤ Á¤º¸¸¦ NULL·Î ¼³Á¤ ÈÄ, °èÁ¤À» deleteÇÏ´Â ÇÔ¼ö. 
+// íšŒì› íƒˆí‡´ ì‹œ, ë¡œê·¸ì¸ ì¤‘ì¸ ê³„ì • ì •ë³´ NULL ì„¤ì • í›„, ê³„ì •ì„ deleteí•˜ëŠ” í•¨ìˆ˜.
  string Account::deleteAccount(){
   if(nowActiveAccount != NULL){
     string userID = nowActiveAccount->getActiveID();
@@ -50,7 +50,7 @@ void Account::addAccount(Account* newAccount){
   return "Not logged in.";
 }
 
- // ·Î±×¾Æ¿ô ½Ã , ÇöÀç ·Î±×ÀÎ ÁßÀÎ °èÁ¤ Á¤º¸¸¦ NUL:L·Î ¼³Á¤ÇÏ´Â ÇÔ¼ö.
+ // ë¡œê·¸ì•„ì›ƒì‹œ, í˜„ì¬ ë¡œê·¸ì¸ ì¤‘ì¸ ê³„ì • ì •ë³´ë¥¼ NULL ì„¤ì •í•˜ëŠ” í•¨ìˆ˜.
 string Account::signOut(){
   if(nowActiveAccount != NULL){
     string userID = nowActiveAccount->getUserID();
@@ -60,22 +60,22 @@ string Account::signOut(){
   return "Not logged in.";
 }
 
-//ÇöÀç ·Î±×ÀÎ ÁßÀÎ °èÁ¤ÀÇ ÂüÁ¶°ªÀ» ¹İÈ¯ÇÏ´Â ÇÔ¼ö.
+//ë¡œê·¸ì¸ ì¤‘ì¸ ê³„ì©¡ì˜ ì°¸ì¡°ê°’ ë°˜í™˜.
 Account* Account::getActiveAccount(){
   return nowActiveAccount;
 }
 
-//ÇöÀç ·Î±×ÀÎ ÁßÀÎ °èÁ¤ÀÇ ÀÌ¸§ Á¤º¸¸¦ ¹İÈ¯ÇÏ´Â ÇÔ¼ö. 
+//ë¡œê·¸ì¸ ì¤‘ì¸ ê³„ì •ì˜ ì´ë¦„ ì •ë³´ ë°˜í™˜
 string Account::getActiveName(){
   return "Not logged in.";
 }
 
-//ÇöÀç ·Î±×ÀÎ ÁßÀÎ °èÁ¤ÀÇ ¹øÈ£ Á¤º¸¸¦ ¹İÈ¯ÇÏ´Â ÇÔ¼ö.
+//ë¡œê·¸ì¸ ì¤‘ì¸ ê³„ì •ì˜ ë²ˆí˜¸ ì •ë³´ ë°˜í™˜.
 string Account::getActiveNum(){
   return "Not logged in.";
 }
 
-//ÇöÀç ·Î±×ÀÎ ÁßÀÎ °èÁ¤ÀÇ ID Á¤º¸¸¦ ¹İÈ¯ÇÏ´Â ÇÔ¼ö.
+//ë¡œê·¸ì¸ ì¤‘ì¸ ê³„ì •ì˜ ID ì •ë³´ ë°˜í™˜.
 string Account::getActiveID(){
   if(nowActiveAccount != NULL)
    return this->userID;

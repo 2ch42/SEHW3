@@ -5,23 +5,23 @@
 
 using namespace std;
 
-// ½Ã½ºÅÛÀÇ »ç¿ë ±ÇÇÑÀÌ ÀÖ´Â ÀÏ¹İÈ¸¿ø, È¸»çÈ¸¿øÀÇ Super classÀÎ Entity class
+// ì‹œìŠ¤í…œì˜ ì‚¬ìš© ê¶Œí•œì´ ìˆëŠ” ì¼ë°˜íšŒì› íšŒì‚¬íšŒì›ì˜ super classì¸ Entity class
 class Account{
   private:
-    string userID;              // È¸¿ø ID
-    string password;        // È¸¿ø ºñ¹Ğ¹øÈ£
-    static vector<Account*> accountList;        // µî·ÏµÈ °èÁ¤µéÀÇ ÂüÁ¶°ªÀ» °¡Áö´Â static vector Æ÷ÀÎÅÍ ¹è¿­
-    static Account* nowActiveAccount;           // ÇöÀç ·Î±×ÀÎ ÁßÀÎ °èÁ¤¿¡ ´ëÇÑ ÂüÁ¶°ªÀ» °¡Áö´Â static Æ÷ÀÎÅÍ º¯¼ö
+    string userID;              // íšŒì› ID
+    string password;        // íšŒì› ë¹„ë°€ë²ˆí˜¸
+    static vector<Account*> accountList;        // ë“±ë¡ëœ ê³„ì •ë“¤ì˜ ì°¸ì¡°ê°’ì„ ê°€ì§€ëŠ” static vector í¬ì¸í„° ë°°ì—´
+    static Account* nowActiveAccount;           // í˜„ì¬ ë¡œê·¸ì¸ ì¤‘ì¸ ê³„ì •ì— ëŒ€í•œ ì°¸ì¡°ê°’ì„ ê°€ì§€ëŠ” static í¬ì¸í„° ë³€ìˆ˜
   public:
-    Account(string userID, string password);        // »ı¼ºÀÚ
+    Account(string userID, string password);        // ìƒì„±ì
     string getUserID(); 
     string getPassword();
-    virtual string getActiveName();     // ÇöÀç ·Î±×ÀÎ ÁßÀÎ °èÁ¤¿¡ ´ëÇÑ ÀÌ¸§ Á¤º¸¸¦ ¹İÈ¯ÇÏ´Â ÇÔ¼ö. sub class¿¡¼­ ÇÔ¼ö ÀçÁ¤ÀÇ¸¦ À§ÇØ virtual·Î ¼±¾ğ.
-    virtual string getActiveNum();      // ÇöÀç ·Î±×ÀÎ ÁßÀÎ °èÁ¤¿¡ ´ëÇÑ ¹øÈ£ Á¤º¸¸¦ ¹İÈ¯ÇÏ´Â ÇÔ¼ö. sub class¿¡¼­ ÇÔ¼ö ÀçÁ¤ÀÇ¸¦ À§ÇØ virtual·Î ¼±¾ğ.
-    virtual string getActiveID();           // ÇöÀç ·Î±×ÀÎ ÁßÀÎ °èÁ¤¿¡ ´ëÇÑ ID Á¤º¸¸¦ ¹İÈ¯ÇÏ´Â ÇÔ¼ö. sub class¿¡¼­ ÇÔ¼ö ÀçÁ¤ÀÇ¸¦ À§ÇØ virtual·Î ¼±¾ğ.
-    static void addAccount(Account* newAccount);    // È¸¿ø °¡ÀÔ ½Ã, »õ·Î¿î °èÁ¤À» »ı¼ºÇÏ´Â static ÇÔ¼ö.
-    static bool signIn(string userID, string password);     // ·Î±×ÀÎ ½Ã, °èÁ¤ È®ÀÎ ¹× ·Î±×ÀÎÀ» ÁøÇàÇÏ´Â static ÇÔ¼ö.
-    static Account* getActiveAccount();     // ÇöÀç ·Î±×ÀÎ ÁßÀÎ °èÁ¤ÀÇ ÂüÁ¶°ªÀ» ¹İÈ¯ÇÏ´Â ÇÔ¼ö.
-    static string deleteAccount();      // È¸¿ø Å»Åğ ½Ã, ÇöÀç ·Î±×ÀÎ ÁßÀÎ °èÁ¤À» »èÁ¦ÇÏ´Â ÇÔ¼ö.
-    static string signOut();        // ·Î±×¾Æ¿ô ½Ã, ÇöÀç ·Î±×ÀÎ ÁßÀÎ °èÁ¤À» NULL·Î ¼³Á¤ ÈÄ ·Î±×¾Æ¿ôµÈ °èÁ¤ÀÇ ID¸¦ ¹İÈ¯ÇÏ´Â ÇÔ¼ö.
+    virtual string getActiveName();     // í˜„ì¬ ë¡œê·¸ì¸ ì¤‘ì¸ ê³„ì •ì— ëŒ€í•œ ì´ë¦„ ì •ë³´ë¥¼ ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜. sub classì—ì„œ í•¨ìˆ˜ ì¬ì •ì˜ë¥¼ ìœ„í•´ virtualë¡œ ì„ ì–¸.
+    virtual string getActiveNum();      // í˜„ì¬ ë¡œê·¸ì¸ ì¤‘ì¸ ê³„ì •ì— ëŒ€í•œ ë²ˆí˜¸ ì •ë³´ë¥¼ ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜. sub classì—ì„œ í•¨ìˆ˜ ì¬ì •ì˜ë¥¼ ìœ„í•´ virtualë¡œ ì„ ì–¸.
+    virtual string getActiveID();           // í˜„ì¬ ë¡œê·¸ì¸ ì¤‘ì¸ ê³„ì •ì— ëŒ€í•œ ID ì •ë³´ë¥¼ ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜. sub classì—ì„œ í•¨ìˆ˜ ì¬ì •ì˜ë¥¼ ìœ„í•´ virtualë¡œ ì„ ì–¸.
+    static void addAccount(Account* newAccount);    // íšŒì›ê°€ì… ì‹œ ìƒˆë¡œìš´ ê³„ì •ì„ ìƒì„±í•˜ëŠ” static í•¨ìˆ˜
+    static bool signIn(string userID, string password);     // ë¡œê·¸ì¸ ì‹œ, ê³„ì • í™•ì¸ ë° ë¡œê·¸ì¸ ì§„í–‰í•˜ëŠ” static í•¨ìˆ˜.
+    static Account* getActiveAccount();     // í˜„ì¬ ë¡œê·¸ì¸ ì¤‘ì¸ ê³„ì •ì˜ ì°¸ì¡°ê°’ì„ ë°˜í™˜ í•¨ìˆ˜.
+    static string deleteAccount();      // íšŒì› íƒˆí‡´ ì‹œ, ë¡œê·¸ì¸ ì¤‘ì¸ ê³„ì •ì„ ì‚­ì œí•˜ëŠ” í•¨ìˆ˜.
+    static string signOut();        // ë¡œê·¸ì•„ì›ƒ ì‹œ, í˜„ì¬ ë¡œê·¸ì¸ ì¤‘ì¸ ê³„ì •ì„ NULL ë¡œ ì„¤ì • í›„ ë¡œê·¸ì•„ì›ƒ ëœ ê³„ì •ì˜ IDë¥¼ ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜.
 };

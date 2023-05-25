@@ -5,13 +5,13 @@
 
 using namespace std;
 
-// È¸¿ø°¡ÀÔ ±â´É¿¡ ´ëÇÑ Boundary class
+// íšŒì›ê°€ì… ê¸°ëŠ¥ì— ëŒ€í•œBoundary class
 class SignUpUI{
   public:
     void requestSignUp(int typeNum, string name, string num, string userID, string password);
 };
 
-// È¸¿ø°¡ÀÔ ±â´É¿¡ ´ëÇÑ Control class
+// íšŒì›ê°€ì… ê¸°ëŠ¥ì— ëŒ€í•œ Control class
 class SignUp{
   public:
     static void createNewAccount(int typeNum, string name, string num, string userID, string password);

@@ -1,6 +1,6 @@
 #include "CompanyAccount.h"
 
-// È¸»çÈ¸¿ø °èÁ¤¿¡ ´ëÇÑ »ý¼ºÀÚ
+// íšŒì‚¬ íšŒì› ê³„ì •ì— ëŒ€í•œ ìƒì„±ìž
 CompanyAccount::CompanyAccount(string companyName, string businessNum, string userID, string password) : Account(userID, password){
   this->companyName = companyName;
   this->businessNum = businessNum;
@@ -14,17 +14,17 @@ string CompanyAccount::getBusinessNum(){
   return businessNum;
 }
 
-// ·Î±×ÀÎ µÈ È¸»çÈ¸¿ø °èÁ¤ÀÇ È¸»çÀÌ¸§ Á¤º¸¸¦ ¹ÝÈ¯
+// ë¡œê·¸ì¸ ëœ íšŒì‚¬íšŒì› ê³„ì •ì˜ íšŒì‚¬ì´ë¦„ ì •ë³´ë¥¼ ë°˜í™˜
 string CompanyAccount::getActiveName(){
   return this->companyName;
 }
 
-// ·Î±×ÀÎ µÈ È¸»çÈ¸¿ø °èÁ¤ÀÇ »ç¾÷ÀÚ¹øÈ£ Á¤º¸¸¦ ¹ÝÈ¯
+// ë¡œê·¸ì¸ ëœ íšŒì‚¬íšŒì› ê³„ì •ì˜ ì‚¬ì—…ìžë²ˆí˜¸ë¥¼ ë°˜í™˜
 string CompanyAccount::getActiveNum(){
   return this->businessNum;
 }
 
-// ·Î±×ÀÎ µÈ È¸»çÈ¸¿ø °èÁ¤ÀÇ ID Á¤º¸¸¦ ¹ÝÈ¯
+// ë¡œê·¸ì¸ ëœ íšŒì‚¬íšŒì› ê³„ì •ì˜ ID ì •ë³´ë¥¼ ë°˜í™˜
 string CompanyAccount::getActiveID(){
   return this->getUserID();
 }

@@ -3,14 +3,14 @@
 
 using namespace std;
 
-//·Î±×ÀÎ ±â´É¿¡ ´ëÇÑ Boundary class
+//ë¡œê·¸ì¸ ê¸°ëŠ¥ì— ëŒ€í•œ Boundary class
 class SignInUI{
   public:
     void showHomeScreen(string userID, string password);
     void requestSignIn(string userID, string password);
 };
 
-// ·Î±×ÀÎ ±â´É¿¡ ´ëÇÑ Control class
+// ë¡œê·¸ì¸ ê¸°ëŠ¥ì— ëŒ€í•œ Control class
 class SignIn{
   private:
     SignInUI signInUI;

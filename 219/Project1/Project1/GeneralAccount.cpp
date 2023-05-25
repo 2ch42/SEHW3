@@ -1,6 +1,6 @@
 #include "GeneralAccount.h"
 
-// ÀÏ¹ÝÈ¸¿ø °èÁ¤ »ý¼ºÀÚ
+// ì¼ë°˜íšŒì› ê³„ì • ìƒì„±ìž
 GeneralAccount::GeneralAccount(string name, string regNum, string userID, string password) : Account(userID, password){
   this->name = name;
   this->regNum = regNum;
@@ -14,17 +14,17 @@ string GeneralAccount::getRegNum(){
   return this->regNum;
 }
 
-// ·Î±×ÀÎ µÈ ÀÏ¹ÝÈ¸¿ø °èÁ¤ÀÇ ÀÌ¸§ Á¤º¸¸¦ ¹ÝÈ¯
+// ë¡œê·¸ì¸ ëœ ì¼ë°˜íšŒì› ê³„ì •ì˜ ì´ë¦„ ì •ë³´ë¥¼ ë°˜í™˜
 string GeneralAccount::getActiveName(){
   return this->name;
 }
 
-//·Î±×ÀÎ µÈ ÀÏ¹ÝÈ¸¿ø °èÁ¤ÀÇ ÁÖ¹Î¹øÈ£ Á¤º¸¸¦ ¹ÝÈ¯
+//ë¡œê·¸ì¸ ëœ ì¼ë°˜íšŒì› ê³„ì •ì˜ ì£¼ë¯¼ë²ˆí˜¸ ì •ë³´ë¥¼ ë°˜í™˜
 string GeneralAccount::getActiveNum(){
   return this->regNum;
 }
 
-//·Î±×ÀÎ µÈ ÀÏ¹ÝÈ¸¿ø °èÁ¤ÀÇ ID Á¤º¸¸¦ ¹ÝÈ¯
+//ë¡œê·¸ì¸ ëœ ì¼ë°˜íšŒì› ê³„ì •ì˜ ID ì •ë³´ë¥¼ ë°˜í™˜
 string GeneralAccount::getActiveID(){
   return this->getUserID();
 }

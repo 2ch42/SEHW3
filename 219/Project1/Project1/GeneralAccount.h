@@ -4,16 +4,16 @@
 
 using namespace std;
 
-// ½Ã½ºÅÛ¿¡ µî·ÏµÈ È¸¿ø Áß ÀÏ¹İ È¸¿ø¿¡ ´ëÇÑ Entity class
+// ì‹œìŠ¤í…œì— ë“±ë¡ëœ íšŒì› ì¤‘ ì¼ë°˜ íšŒì›ì— ëŒ€í•œ Entity class
 class GeneralAccount : public Account{
   private:
-    string name;    // ÀÌ¸§
-    string regNum;      // ÁÖ¹Î¹øÈ£
+    string name;    // ì´ë¦„
+    string regNum;      // ì£¼ë¯¼ë²ˆí˜¸
   public:
-    GeneralAccount(string name, string regNum, string userID, string password);     // »ı¼ºÀÚ
+    GeneralAccount(string name, string regNum, string userID, string password);     // ìƒì„±ì
     string getName(); 
     string getRegNum();
-    virtual string getActiveName();         // ÇöÀç ·Î±×ÀÎ µÈ °èÁ¤ÀÇ ÀÌ¸§À» ¹İÈ¯ÇÏ´Â ÇÔ¼ö
-    virtual string getActiveNum();          // ÇöÀç ·Î±×ÀÎ µÈ °èÁ¤ÀÇ ÁÖ¹Î¹øÈ£¸¦ ¹İÈ¯ÇÏ´Â ÇÔ¼ö
-    virtual string getActiveID();               // ÇöÀç ·Î±×ÀÎ µÈ °èÁ¤ÀÇ ID¸¦ ¹İÈ¯ÇÏ´Â ÇÔ¼ö
+    virtual string getActiveName();         // í˜„ì¬ ë¡œê·¸ì¸ ëœ ê³„ì •ì˜ ì´ë¦„ì„ ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜
+    virtual string getActiveNum();          // í˜„ì¬ ë¡œê·¸ì¸ ëœ ê³„ì •ì˜ ì£¼ë¯¼ë²ˆí˜¸ë¥¼ ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜
+    virtual string getActiveID();               // í˜„ì¬ ë¡œê·¸ì¸ ëœ ê³„ì •ì˜ IDë¥¼ ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜
 };

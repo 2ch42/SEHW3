@@ -13,6 +13,6 @@ string SignOut::disconnectAccount(){
 // ����ڷκ��� �α׾ƿ� ��û�� �޾� �α׾ƿ� ����� ȭ�鿡 ����Ѵ�.
 void SignOutUI::requestSignOut(){
   string userID = SignOut::disconnectAccount();
-  fprintf(out_fp, "1.2. signOut\n");
+  fprintf(out_fp, "2.2. signOut\n");
   fprintf(out_fp, "> %s\n", userID.c_str());
 }
