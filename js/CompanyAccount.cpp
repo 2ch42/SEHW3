@@ -12,3 +12,11 @@ string CompanyAccount::getCompanyName(){
 string CompanyAccount::getBusinessNum(){
   return businessNum;
 }
+
+string CompanyAccount::getActiveName(){
+  return companyName;
+}
+
+string CompanyAccount::getActiveNum(){
+  return businessNum;
+}

@@ -12,4 +12,8 @@ class CompanyAccount : public Account{
     CompanyAccount(string companyName, string businessNum, string userID, string password);
     string getCompanyName();
     string getBusinessNum();
+    virtual string getActiveName();
+    virtual string getActiveNum();
+    static string getActiveCompanyName();
+    static string getActiveBusinessNum();
 };

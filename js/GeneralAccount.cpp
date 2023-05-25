@@ -14,3 +14,11 @@ string GeneralAccount::getName(){
 string GeneralAccount::getRegNum(){
   return this->regNum;
 }
+
+string GeneralAccount::getActiveName(){
+  return name;
+}
+
+string GeneralAccount::getActiveNum(){
+  return regNum;
+}
