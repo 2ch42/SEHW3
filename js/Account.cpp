@@ -42,11 +42,21 @@ void Account::deleteAccount(){
   }
 }
 
-void Account::signOut(){
+string Account::signOut(){
   if(nowActiveAccount != NULL){
-    cout<<"> " + nowActiveAccount->userID<<endl;
+    string userID = nowActiveAccount->getUserID();
     nowActiveAccount = NULL;
+    return userID;
   }
+  return "";
+}
+
+string Account::getActiveName(){
+  return nowActiveAccount->getActiveName();
+}
+
+string Account::getActiveNum(){
+  return nowActiveAccount->getActiveNum();
 }
 
 Account::~Account(){
