@@ -7,7 +7,7 @@ string Recruit::getCompanyName()
 	return CompanyName;
 }
 
-Recruit Recruit::insertNewRecruit(string Work, int NumOfPeople, string Deadline, string CompanyName, string Id, string BusinessNumber)
+Recruit Recruit::insertNewRecruit(string Work, int NumOfPeople, string Deadline, string CompanyName, string Id, string BusinessNumber)	//인자로 받은 변수들을 멤버 변수로 넣어 새로운 Recruit를 생성한다.
 {
 	Recruit recruit;
 	recruit.setWork(Work);
