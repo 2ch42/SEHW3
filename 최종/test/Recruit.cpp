@@ -7,14 +7,22 @@ string Recruit::getCompanyName()
 	return CompanyName;
 }
 
-Recruit Recruit::insertNewRecruit(string Work, int NumOfPeople, string Deadline)
+Recruit Recruit::insertNewRecruit(string Work, int NumOfPeople, string Deadline, string CompanyName, string Id, int BusinessNumber)
 {
 	Recruit recruit;
 	recruit.setWork(Work);
 	recruit.setNumberOfPeople(NumOfPeople);
 	recruit.setDeadline(Deadline);
+	recruit.setCompanyName(CompanyName);
+	recruit.setBusinessNumber(BusinessNumber);
+	recruit.setId(Id);
 	recruitlist.push_back(recruit);
 	return recruit;
+}
+
+string Recruit::getId()
+{
+	return Id;
 }
 
 int Recruit::getBusinessNumber()
@@ -37,12 +45,6 @@ string Recruit::getDeadline()
 	return Deadline;
 }
 
-/*
-CompanyAccount Recruit::getAccount()
-{
-	return account;
-}
-*/
 
 vector<Recruit>* Recruit::getrecruitlist()
 {
@@ -74,9 +76,7 @@ void Recruit::setDeadline(string Deadline)
 	this->Deadline = Deadline;
 }
 
-/*
-void Recruit::setCompanyAccount(CompanyAccount account)
+void Recruit::setId(string Id)
 {
-	this->account = account;
+	this->Id = Id;
 }
-*/

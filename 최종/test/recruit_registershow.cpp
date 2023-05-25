@@ -3,14 +3,14 @@
 
 
 
-Recruit AddRecruit::addNewRecruit(string Work, int NumOfPeople, string Deadline)
+Recruit AddRecruit::addNewRecruit(string Work, int NumOfPeople, string Deadline, string CompanyName, string Id, int BusinessNumber)
 {
-	return Recruit::insertNewRecruit(Work, NumOfPeople, Deadline);
+	return Recruit::insertNewRecruit(Work, NumOfPeople, Deadline, CompanyName, Id, BusinessNumber);
 }
 
-void AddRecruitUI::addRecruit(string Work, int NumOfPeople, string Deadline)
+void AddRecruitUI::addRecruit(string Work, int NumOfPeople, string Deadline, string CompanyName, string Id, int BusinessNumber)
 {
-	Recruit recruit = addrecruit->addNewRecruit(Work, NumOfPeople, Deadline);
+	Recruit recruit = addrecruit->addNewRecruit(Work, NumOfPeople, Deadline, CompanyName, Id, BusinessNumber);
 	cout << "3.1. registered" << endl;
 	cout << ">" << Work << " " << NumOfPeople << " " << Deadline << endl;
 }

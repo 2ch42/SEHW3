@@ -79,10 +79,12 @@ void doTask() {
             case 1: {
                 string work, dl;
                 int nop;
-				string companyName = accountUI.getActiveName();
-				string businessNum = accountUI.getActiveNum();
+				Account* activeAccount = Account::nowActiveAccount;
+				string CompanyName = activeAccount->getActiveName;
+				string Id = activeAccount->getUserID;
+				int BusinessNumber = activeAccount->getActiveNum;
                 cin >> work >> nop >> dl;
-                addrecruitui.addRecruit(work, nop, dl);
+                addrecruitui.addRecruit(work, nop, dl, CompanyName, Id, BusinessNumber);
                 break;
             }
             case 2: {

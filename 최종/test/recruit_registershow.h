@@ -7,7 +7,7 @@
 class AddRecruit
 {
 public:
-	Recruit addNewRecruit(string Work, int NumOfPeople, string Deadline);
+	Recruit addNewRecruit(string Work, int NumOfPeople, string Deadline, string CompanyName, string Id, int BusinessNumber);
 };
 
 class AddRecruitUI
@@ -15,7 +15,7 @@ class AddRecruitUI
 private:
 	AddRecruit* addrecruit = new AddRecruit();
 public:
-	void addRecruit(string Work, int NumOfPeople, string Deadline);
+	void addRecruit(string Work, int NumOfPeople, string Deadline, string CompanyName, string Id, int BusinessNumber);
 };
 
 
