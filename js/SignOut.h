@@ -1,4 +1,6 @@
+#include <string>
 
+using namespace std;
 
 class SignOutUI{
   public:
@@ -7,5 +9,5 @@ class SignOutUI{
 
 class SignOut{
   public:
-    static void disconnectAccount();
+    static string disconnectAccount();
 };

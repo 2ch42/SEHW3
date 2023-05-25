@@ -3,10 +3,12 @@
 
 using namespace std;
 
-void SignOut::disconnectAccount(){
-  Account::signOut();
+string SignOut::disconnectAccount(){
+  string userID = Account::signOut();
+  return userID;
 }
 
 void SignOutUI::requestSignOut(){
-  SignOut::disconnectAccount();
+  string userID = SignOut::disconnectAccount();
+  cout<<"> " + userID<<endl;
 }

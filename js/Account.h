@@ -19,6 +19,6 @@ class Account{
     static bool signIn(string userID, string password);
     void activeAccount();
     static void deleteAccount();
-    static void signOut();
+    static string signOut();
     ~Account();
 };
