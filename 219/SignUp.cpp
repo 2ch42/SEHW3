@@ -7,7 +7,7 @@
 
 using namespace std;
 
-
+//  사용자가 입력한 정보를 입력 받아  일반 회원or회사 회원 객체 생성한다.
 void SignUp::createNewAccount(int typeNum, string name, string num, string userID, string password){
       if(typeNum == 1){
         string companyName = name;
@@ -22,6 +22,7 @@ void SignUp::createNewAccount(int typeNum, string name, string num, string userI
   
 }
 
+// 사용자로부터 정보를 입력 받아 인자를 control class에 전달하고 계정이 생성된 후 정보를 화면에 출력한다.
 void SignUpUI::requestSignUp(int typeNum, string name, string num, string userID, string password){
   SignUp::createNewAccount(typeNum, name, num, userID, password);
   cout<<"> " + name + " " + num + " " + userID + " " + password<<endl;

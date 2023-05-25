@@ -32,9 +32,6 @@ void doTask() {
     Account* activeAccount = NULL;
     CheckApplyInfoUI checkapplyinfoUI;
 
-    FILE* in_fp = fopen(INPUT_FILE_NAME, "r+");
-    FILE* out_fp = fopen(OUTPUT_FILE_NAME, "w+");
-
 
     while (!is_program_exit) {
         // 입력 파일에서 메뉴 숫자 2개를 읽기
