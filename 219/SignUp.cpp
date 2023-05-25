@@ -8,7 +8,7 @@
 
 using namespace std;
 
-//  »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ Á¤º¸¸¦ ÀÔ·Â ¹Ş¾Æ  ÀÏ¹İ È¸¿øorÈ¸»ç È¸¿ø °´Ã¼ »ı¼ºÇÑ´Ù.
+//  ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½Ş¾ï¿½  ï¿½Ï¹ï¿½ È¸ï¿½ï¿½orÈ¸ï¿½ï¿½ È¸ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 void SignUp::createNewAccount(int typeNum, string name, string num, string userID, string password){
       if(typeNum == 1){
         string companyName = name;
@@ -23,9 +23,9 @@ void SignUp::createNewAccount(int typeNum, string name, string num, string userI
   
 }
 
-// »ç¿ëÀÚ·ÎºÎÅÍ Á¤º¸¸¦ ÀÔ·Â ¹Ş¾Æ ÀÎÀÚ¸¦ control class¿¡ Àü´ŞÇÏ°í °èÁ¤ÀÌ »ı¼ºµÈ ÈÄ Á¤º¸¸¦ È­¸é¿¡ Ãâ·ÂÇÑ´Ù.
+// ï¿½ï¿½ï¿½ï¿½Ú·Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½Ş¾ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ control classï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È­ï¿½é¿¡ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 void SignUpUI::requestSignUp(int typeNum, string name, string num, string userID, string password){
   SignUp::createNewAccount(typeNum, name, num, userID, password);
   fprintf(out_fp, "1.1. signUp\n");
-  fprintf(out_fp, "%s %s %s %s %s\n", "> ", name, num, userID, password);
+  fprintf(out_fp, "%s %s %s %s %s\n", "> ", name.c_str(), num.c_str(), userID.c_str(), password.c_str());
 }

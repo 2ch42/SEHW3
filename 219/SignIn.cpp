@@ -6,7 +6,7 @@
 
 using namespace std;
 
-// ÀÔ·Â¹ÞÀº ID, PW¸¦ ÅëÇØ µî·ÏµÈ °èÁ¤ÀÌ ¸Â´ÂÁö È®ÀÎ ÈÄ ¸Â´Ù¸é true, µî·ÏµÈ °èÁ¤ÀÌ ¾Æ´Ï¶ó¸é false¸¦ ¹ÝÈ¯ÇÑ´Ù.
+// ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ID, PWï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ïµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Â´ï¿½ï¿½ï¿½ È®ï¿½ï¿½ ï¿½ï¿½ ï¿½Â´Ù¸ï¿½ true, ï¿½ï¿½Ïµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ´Ï¶ï¿½ï¿½ falseï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ñ´ï¿½.
 bool SignIn::verifyAccount(string userID, string password){
   if(Account::signIn(userID, password)){
     return true;
@@ -14,13 +14,13 @@ bool SignIn::verifyAccount(string userID, string password){
   else return false;
 }
 
-// ·Î±×ÀÎ ÈÄ °á°ú¸¦ È­¸é¿¡ Ãâ·ÂÇÑ´Ù.
+// ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ È­ï¿½é¿¡ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 void SignInUI::showHomeScreen(string userID, string password){
-    fprintf("2.1. signIn\n");
-    fprintf(out_fp, "%s %s %s\n", "> ", userID, password);
+    fprintf(out_fp, "2.1. signIn\n");
+    fprintf(out_fp, "%s %s %s\n", "> ", userID.c_str(), password.c_str());
 }
 
-// »ç¿ëÀÚ·ÎºÎÅÍ ID¿Í PW¸¦ ÀÔ·Â ¹Þ¾Æ ·Î±×ÀÎ ¿äÃ»À» ÇÑ´Ù.
+// ï¿½ï¿½ï¿½ï¿½Ú·Îºï¿½ï¿½ï¿½ IDï¿½ï¿½ PWï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½Þ¾ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½Ñ´ï¿½.
 void SignInUI::requestSignIn(string userID, string password){
   if(SignIn::verifyAccount(userID, password))
     showHomeScreen(userID, password);

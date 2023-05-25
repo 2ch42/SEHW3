@@ -4,15 +4,15 @@
 
 using namespace std;
 
-//·Î±×ÀÎ µÈ È¸¿øÀÇ °èÁ¤À» »èÁ¦ÇÏ´Â ÇÔ¼ö¸¦ È£ÃâÇÑ ÈÄ »èÁ¦ÇÒ °èÁ¤ÀÇ ID¸¦ ¹İÈ¯ÇÑ´Ù.
+//ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½ï¿½ï¿½ È£ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ IDï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ñ´ï¿½.
 string DeleteAccount::removeAccount(){
   string userID = Account::deleteAccount();
   return userID;
 }
 
-//·Î±×ÀÎ µÈ È¸¿øÀ¸·ÎºÎÅÍ È¸¿ø Å»Åğ ¿äÃ»À» ¹Ş¾Æ »èÁ¦ ÈÄ °á°ú¸¦ Ãâ·ÂÇÑ´Ù.
+//ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ È¸ï¿½ï¿½ Å»ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½Ş¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 void DeleteAccountUI::requestDelete(){
   string userID = DeleteAccount::removeAccount();
   fprintf(out_fp, "1.2. deleteAccount\n");
-  fprintf(out_fp, "%s %s\n", "> ", userID);
+  fprintf(out_fp, "%s %s\n", "> ", userID.c_str());
 }

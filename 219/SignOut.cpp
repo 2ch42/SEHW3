@@ -4,15 +4,15 @@
 
 using namespace std;
 
-// ¿äÃ»¹ŞÀº ·Î±×¾Æ¿ôÀ» ÁøÇàÇÏ´Â ÇÔ¼ö¸¦ È£ÃâÇÏ°í ·Î±×¾Æ¿ôÀ» ÁøÇàÇÑ ÈÄ ·Î±×¾Æ¿ôÇÑ ID¸¦ boundary class·Î ¹İÈ¯ÇÑ´Ù.
+// ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ ï¿½Î±×¾Æ¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½ï¿½ï¿½ È£ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Î±×¾Æ¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Î±×¾Æ¿ï¿½ï¿½ï¿½ IDï¿½ï¿½ boundary classï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ñ´ï¿½.
 string SignOut::disconnectAccount(){
   string userID = Account::signOut();
   return userID;
 }
 
-// »ç¿ëÀÚ·ÎºÎÅÍ ·Î±×¾Æ¿ô ¿äÃ»À» ¹Ş¾Æ ·Î±×¾Æ¿ô °á°ú¸¦ È­¸é¿¡ Ãâ·ÂÇÑ´Ù.
+// ï¿½ï¿½ï¿½ï¿½Ú·Îºï¿½ï¿½ï¿½ ï¿½Î±×¾Æ¿ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½Ş¾ï¿½ ï¿½Î±×¾Æ¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ È­ï¿½é¿¡ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 void SignOutUI::requestSignOut(){
   string userID = SignOut::disconnectAccount();
   fprintf(out_fp, "1.2. signOut\n");
-  fprintf(out_fp, "%s %s", "> ", "userID");
+  fprintf(out_fp, "%s %s\n", "> ", userID.c_str());
 }
