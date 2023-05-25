@@ -21,3 +21,7 @@ void SignUp::createNewAccount(int typeNum, string name, string num, string userI
       }
   
 }
+
+void SignUpUI::requestSignUp(int typeNum, string name, string num, string userID, string password){
+  SignUp::createNewAccount(typeNum, name, num, userID, password);
+}
