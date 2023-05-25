@@ -1,5 +1,6 @@
 #include <cstdio>
 #include "recruit_registershow.h"
+#include "file.h"
 
 
 
@@ -14,7 +15,7 @@ void AddRecruitUI::addRecruit(string Work, int NumOfPeople, string Deadline, str
 {
 	fprintf(out_fp, "3.1. registered\n");
 	Recruit recruit = addrecruit->addNewRecruit(Work, NumOfPeople, Deadline, CompanyName, Id, BusinessNumber);
-	fprintf(out_fp, "> %s %d %s\n", Work.c_str(), NumOfPeople.c_str(), Deadline.c_str());
+	fprintf(out_fp, "> %s %d %s\n", Work.c_str(), NumOfPeople, Deadline.c_str());
 }
 
 //채용 정보 조회 시, 채용 정보 리스트를 반환하는 함수.
