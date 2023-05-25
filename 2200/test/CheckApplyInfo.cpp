@@ -1,15 +1,17 @@
 #include "CheckApplyInfo.h"
 #include <algorithm>
+#include "file.h"
 
 
 // 지원 정보를 조회하기위한 UI로 지원 정보 조회 Control로부터 지원 정보 리스트를 받아 출력한다.
 void CheckApplyInfoUI::accessApplyInfo(string Id)
 {
+	fprintf(out_fp, "4.3 show apply\n");
 	cout << "4.3 show apply" << endl;
 	vector<Apply> show = app->showSortedApplyInfo(Id);
 	for (int i = 0; i < show.size(); i++)
 	{
-		cout << show[i].getrecruitlist()->getCompanyName() << " " << show[i].getrecruitlist()->getBusinessNumber() << " " << show[i].getrecruitlist()->getWork() << " " << show[i].getrecruitlist()->getNumberOfPeople() << " " << show[i].getrecruitlist()->getDeadline() << endl;
+		fprintf(out_fp, "%s %s %s %d %s\n", show[i].getrecruitlist()->getCompanyName().c_str(), show[i].getrecruitlist()->getBusinessNumber().c_str(), show[i].getrecruitlist()->getWork().c_str(), show[i].getrecruitlist()->getNumberOfPeople(), show[i].getrecruitlist()->getDeadline().c_str());
 	}
 }
 

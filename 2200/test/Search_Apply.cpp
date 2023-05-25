@@ -1,5 +1,6 @@
 #include "Search_Apply.h"
 #include <algorithm>
+#include "file.h"
 
 vector<Recruit> Recruitinquiry::searchList;
 
@@ -7,10 +8,10 @@ vector<Recruit> Recruitinquiry::searchList;
 void RecruitinquiryUI::searchRecruitInfo(string CompanyName)
 {
 	vector<Recruit> searchrecruit = recruit->searchRecruit(CompanyName);
-	cout << "4.1 search" << endl;
+	fprintf(out_fp, "4.1 search\n");
 	for (int i = 0; i < searchrecruit.size(); i++)
 	{
-		cout << searchrecruit[i].getCompanyName() << " " << searchrecruit[i].getBusinessNumber() << " " << searchrecruit[i].getWork() << " " << searchrecruit[i].getNumberOfPeople() << " " << searchrecruit[i].getDeadline() << endl;
+		fprintf(out_fp, "%s %s %s %d %s\n", searchrecruit[i].getCompanyName().c_str(), searchrecruit[i].getBusinessNumber().c_str(), searchrecruit[i].getWork().c_str(), searchrecruit[i].getNumberOfPeople(), searchrecruit[i].getDeadline().c_str());
 	}
 }
 
@@ -57,9 +58,9 @@ vector<Recruit> Applyfor::searchedList;
 // 검색된 채용 정보에 대해서 지원하기 위한 Boundary class의 함수이다. Control 클래스의 함수에 BusinessNumber를 전해주고, Apply, 즉 지원 정보를 받아와 출력한다.
 void ApplyforUI::applyforInfo(string BusinessNumber, string Id)
 {
-	cout << "4.2. apply" << endl;
+	fprintf(out_fp, "4.2 apply\n");
 	Apply cur = apply->applyforCompany(BusinessNumber, Id);
-	cout << cur.getrecruitlist()->getCompanyName() << " " << cur.getrecruitlist()->getBusinessNumber() << " " << cur.getrecruitlist()->getWork() << endl;
+	fprintf(out_fp, "%s %s %s\n", cur.getrecruitlist()->getCompanyName().c_str(), cur.getrecruitlist()->getBusinessNumber().c_str(), cur.getrecruitlist()->getWork().c_str());
 }
 
 /* 검색된 채용 정보에 대해서 지원해주는 Control class의 함수이다.searchedList를 사용하여 검색된 채용 정보에서 사용자가 입력한 사업자 번호와 채용 정보에 등록된 사업자 번호를 비교하여 같다면

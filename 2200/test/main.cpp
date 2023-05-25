@@ -1,6 +1,6 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <string>
-#include <fstream>
 #include "SignUp.h"
 #include "SignIn.h"
 #include "Account.h"
@@ -14,8 +14,6 @@
 #include "file.h"
 
 #define MAX_STRING 32
-#define INPUT_FILE_NAME "input.txt"
-#define OUTPUT_FILE_NAME "output.txt"
 
 
 using namespace std;
@@ -140,6 +138,7 @@ void doTask() {
         }
         default: {
             cout << "END";
+            fclose(in_fp);
             is_program_exit = 1;
             break;
         }
