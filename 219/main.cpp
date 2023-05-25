@@ -87,6 +87,7 @@ void doTask() {
         case 3: {
             switch (menu_level_2) {
             case 1: {
+		//채용 정보 등록, Work와 NumoberOfPeople, Deadline을 입력받아 CompanyName, ID와 함께 인자로 보내준다.
                 char Work[MAX_STRING], dl[MAX_STRING];
                 int nop;
                 fscanf(in_fp, "%s %d %s", Work, &nop, dl);
@@ -97,6 +98,7 @@ void doTask() {
                 break;
             }
             case 2: {
+		//채용 정보 조회, 자신이 등록한 채용 정보 리스트를 보여준다.
                 showrecruitui.showRecruit();
                 break;
             }
