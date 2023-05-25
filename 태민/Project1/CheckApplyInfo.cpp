@@ -5,7 +5,7 @@ void CheckApplyInfoUI::accessApplyInfo()
 {
 	cout << "4.3 지원 정보 조회" << endl;
 	vector<Apply> show = app->showSortedApplyInfo();
-	cout << show.getrecruitlist().getCompanyName() << show.getrecruitlist().getBusinessNumber() << show.getrecruitlist().getWork() << show.getrecruitlist().getNumberOfPeople() << show.getrecruitlist().getDeadline() << endl;
+	cout << show.getrecruitlist().getGeneralAccount().getCompanyName() << show.getGeneralAccount().getBusinessNumber() << show.getGeneralAccount().getWork() << show.getGeneralAccount().getNumberOfPeople() << show.getGeneralAccount().getDeadline() << endl;
 }
 
 vector<Apply> CheckApplyInfo::showSortedApplyInfo()

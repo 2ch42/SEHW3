@@ -141,15 +141,19 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\압축용 (2)\압축용 (2)\Project1\Project1\Recruit.cpp" />
     <ClCompile Include="..\..\..\압축용 (2)\압축용 (2)\Project1\Project1\Search_Apply.cpp" />
+    <ClCompile Include="Account.cpp" />
     <ClCompile Include="Apply.cpp" />
     <ClCompile Include="CheckApplyInfo.cpp" />
+    <ClCompile Include="CompanyAccount.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\압축용 (2)\압축용 (2)\Project1\Project1\Apply.h" />
     <ClInclude Include="..\..\..\압축용 (2)\압축용 (2)\Project1\Project1\Recruit.h" />
     <ClInclude Include="..\..\..\압축용 (2)\압축용 (2)\Project1\Project1\Search_Apply.h" />
+    <ClInclude Include="Account.h" />
     <ClInclude Include="CheckApplyInfo.h" />
+    <ClInclude Include="CompanyAccount.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
