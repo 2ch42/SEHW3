@@ -2,10 +2,10 @@
 #include <string>
 #include <fstream>
 #include "SignUp.h"
-#include "SignInUI.h"
+#include "SignIn.h"
 #include "Account.h"
-#include "DeleteAccountUI.h"
-#include "SignOutUI.h"
+#include "DeleteAccount.h"
+#include "SignOut.h"
 
 #define MAX_STRING 32
 #define INPUT_FILE_NAME "input.txt"

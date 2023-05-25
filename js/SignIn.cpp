@@ -12,3 +12,12 @@ bool SignIn::verifyAccount(string userID, string password){
   }
   else return false;
 }
+
+void SignInUI::showHomeScreen(string userID, string password){
+  cout<<"> "<<userID<<" "<<password<<endl;
+}
+
+void SignInUI::requestSignIn(string userID, string password){
+  if(SignIn::verifyAccount(userID, password))
+    showHomeScreen(userID, password);
+}
