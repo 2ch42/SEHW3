@@ -17,7 +17,7 @@ bool SignIn::verifyAccount(string userID, string password){
 // �α��� �� ����� ȭ�鿡 ����Ѵ�.
 void SignInUI::showHomeScreen(string userID, string password){
     fprintf(out_fp, "2.1. signIn\n");
-    fprintf(out_fp, "%s %s %s\n", "> ", userID.c_str(), password.c_str());
+    fprintf(out_fp, "%s %s\n", userID.c_str(), password.c_str());
 }
 
 // ����ڷκ��� ID�� PW�� �Է� �޾� �α��� ��û�� �Ѵ�.

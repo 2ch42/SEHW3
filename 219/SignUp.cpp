@@ -27,5 +27,5 @@ void SignUp::createNewAccount(int typeNum, string name, string num, string userI
 void SignUpUI::requestSignUp(int typeNum, string name, string num, string userID, string password){
   SignUp::createNewAccount(typeNum, name, num, userID, password);
   fprintf(out_fp, "1.1. signUp\n");
-  fprintf(out_fp, "%s %s %s %s %s\n", "> ", name.c_str(), num.c_str(), userID.c_str(), password.c_str());
+  fprintf(out_fp, "%s %s %s %s\n", name.c_str(), num.c_str(), userID.c_str(), password.c_str());
 }

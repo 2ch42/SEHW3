@@ -14,5 +14,5 @@ string DeleteAccount::removeAccount(){
 void DeleteAccountUI::requestDelete(){
   string userID = DeleteAccount::removeAccount();
   fprintf(out_fp, "1.2. deleteAccount\n");
-  fprintf(out_fp, "%s %s\n", "> ", userID.c_str());
+  fprintf(out_fp, "> %s\n", userID.c_str());
 }
