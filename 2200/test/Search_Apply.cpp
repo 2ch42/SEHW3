@@ -3,6 +3,7 @@
 
 vector<Recruit> Recruitinquiry::searchList;
 
+// 채용 정보 검색을 위한 바운더리 class의 함수이다. 여기서는 Control로 CompanyName을 인자로 보내주어 CompanyName이 같은 채용 정보를 return 받아와 출력한다.
 void RecruitinquiryUI::searchRecruitInfo(string CompanyName)
 {
 	vector<Recruit> searchrecruit = recruit->searchRecruit(CompanyName);
@@ -13,6 +14,7 @@ void RecruitinquiryUI::searchRecruitInfo(string CompanyName)
 	}
 }
 
+// 채용 정보 검색을 위한 Control class의 함수이다. 여기서는 사용자가 입력한 CompanyName과 채용 정보에 등록된 CompanyName을 비교하여 같은 CompanyName을 가진 채용 정보만 init이라는 채용 정보 리스트에 담아서 반환한다.
 vector<Recruit> Recruitinquiry::searchRecruit(string CompanyName)
 {
 	vector<Recruit> init;
@@ -26,7 +28,7 @@ vector<Recruit> Recruitinquiry::searchRecruit(string CompanyName)
 		}
 	}
 	sortbyCompanyName(init);
-	searchList = init;
+	searchList = init; // searchList는 아래에서 후술할 즉시 지원을 위해 검색한 채용 정보를 저장하기위해서 사용한다.
 	return init;
 }
 
@@ -38,11 +40,10 @@ bool Compare(Recruit recruit1, Recruit recruit2)
 		return false;
 }
 
-
+// 회사 이름의 오름 차순으로 정렬하여 출력하는 함수이다. 위의 bool함수를 이용한다.
 void Recruitinquiry::sortbyCompanyName(vector<Recruit>& RecruitList)
 {
 	sort(RecruitList.begin(), RecruitList.end(), Compare);
-	// 회사 이름의 오름차순으로 정렬하여 출력.
 }
 
 
@@ -50,10 +51,10 @@ vector<Recruit>* Recruitinquiry::getList()
 {
 	return &searchList;
 }
-///////////////////////////////////////////////////////////// 위가 4.1부분 아래가 4.2부분
 
 vector<Recruit> Applyfor::searchedList;
 
+// 검색된 채용 정보에 대해서 지원하기 위한 Boundary class의 함수이다. Control 클래스의 함수에 BusinessNumber를 전해주고, Apply, 즉 지원 정보를 받아와 출력한다.
 void ApplyforUI::applyforInfo(string BusinessNumber, string Id)
 {
 	cout << "4.2. apply" << endl;
@@ -61,10 +62,12 @@ void ApplyforUI::applyforInfo(string BusinessNumber, string Id)
 	cout << cur.getrecruitlist()->getCompanyName() << " " << cur.getrecruitlist()->getBusinessNumber() << " " << cur.getrecruitlist()->getWork() << endl;
 }
 
+/* 검색된 채용 정보에 대해서 지원해주는 Control class의 함수이다.searchedList를 사용하여 검색된 채용 정보에서 사용자가 입력한 사업자 번호와 채용 정보에 등록된 사업자 번호를 비교하여 같다면
+searchlist에 추가한다.이후, 이를 Apply에 set으로 searchlist와 지원한 일반 회원의 Id를 저장한다. */
 Apply Applyfor::applyforCompany(string BusinessNumber, string Id)
 {
 	Recruit searchlist;
-	vector<Recruit>* searchedList = Recruitinquiry::getList();
+	vector<Recruit>* searchedList = Recruitinquiry::getList(); // 검색된 채용 정보를 getList해서 가져와서 searchedList에 저장한다. 검색된 채용 정보에 대하여 지원해야 하므로.
 	for (int i = 0; i < searchedList->size(); i++)
 	{
 		if (( * searchedList)[i].getBusinessNumber() == BusinessNumber)

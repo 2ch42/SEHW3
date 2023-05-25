@@ -106,32 +106,37 @@ void doTask() {
         case 4: {
             switch (menu_level_2) {
             case 1: {
-                // 채용 정보 검색
+                // 채용 정보 검색, CompanyName을 입력받아 인자로 보내준다.
                 string CompanyName;
                 cin >> CompanyName;
                 recruitinquiryUI.searchRecruitInfo(CompanyName);
                 break;
             }
             case 2: {
+                // 채용 정보 지원, 사업자 번호를 입력받아 인자로 보내준다. 이때, 사용자의 Id를 같이 저장한다.
                 string BusinessNumber;
                 string Id = activeAccount->getActiveID();
                 ApplyforUI applyforUI;
                 cin >> BusinessNumber;
                 applyforUI.applyforInfo(BusinessNumber, Id);
-                // 채용 정보 지원
                 break;
             }
             case 3: {
+                // 지원 정보 조회, 자신이 지원한 지원정보를 조회해야하므로, 자신의 Id와 지원 정보에 적힌 Id가 같은 지원 정보만 받아온다.
                 string Id = activeAccount->getActiveID();
                 checkapplyinfoUI.accessApplyInfo(Id);
-                // 지원 정보 조회
-                  break;
+                break;
             }
             default: {
                 is_program_exit = 1;
                 break;
             }
             }
+            break;
+        }
+        default: {
+            cout << "END";
+            is_program_exit = 1;
             break;
         }
     }
