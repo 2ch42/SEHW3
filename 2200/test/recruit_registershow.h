@@ -7,15 +7,15 @@
 class AddRecruit
 {
 public:
-	Recruit addNewRecruit(string Work, int NumOfPeople, string Deadline, string CompanyName, string Id, int BusinessNumber);
+	Recruit addNewRecruit(string Work, int NumOfPeople, string Deadline, string CompanyName, string Id, string BusinessNumber);
 };
 
 class AddRecruitUI
 {
 private:
-	AddRecruit* addrecruit = new AddRecruit();
+	AddRecruit* addrecruit;
 public:
-	void addRecruit(string Work, int NumOfPeople, string Deadline, string CompanyName, string Id, int BusinessNumber);
+	void addRecruit(string Work, int NumOfPeople, string Deadline, string CompanyName, string Id, string BusinessNumber);
 };
 
 
@@ -29,7 +29,7 @@ public:
 class ShowRecruitUI
 {
 private:
-	ShowRecruit* showrecruit = new ShowRecruit();
+	ShowRecruit* showrecruit;
 public:
 	void showRecruit();
 };

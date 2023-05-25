@@ -7,7 +7,10 @@
 #include "DeleteAccount.h"
 #include "SignOut.h"
 #include "Recruit.h"
+#include "Apply.h"
 #include "recruit_registershow.h"
+#include "Search_Apply.h"
+#include "CheckApplyInfo.h"
 
 #define MAX_STRING 32
 #define INPUT_FILE_NAME "input.txt"
@@ -26,7 +29,9 @@ void doTask() {
     SignOutUI signOutUI;
     AddRecruitUI addrecruitui;
     ShowRecruitUI showrecruitui;
-	Account accountUI("null", "null");
+    RecruitinquiryUI recruitinquiryUI;
+    Account* activeAccount = NULL;
+    CheckApplyInfoUI checkapplyinfoUI;
 
 
     while (!is_program_exit) {
@@ -61,6 +66,7 @@ void doTask() {
                 string id, pw;
                 cin >> id >> pw;
                 signInUI.requestSignIn(id, pw);
+                activeAccount = Account::getActiveAccount();
                 break;
             }
             case 2: {
@@ -79,11 +85,10 @@ void doTask() {
             case 1: {
                 string work, dl;
                 int nop;
-				Account* activeAccount = Account::nowActiveAccount;
-				string CompanyName = activeAccount->getActiveName;
-				string Id = activeAccount->getUserID;
-				int BusinessNumber = activeAccount->getActiveNum;
                 cin >> work >> nop >> dl;
+                string CompanyName = activeAccount->getActiveName();
+                string Id = activeAccount->getActiveID();
+                string BusinessNumber = activeAccount->getActiveNum();
                 addrecruitui.addRecruit(work, nop, dl, CompanyName, Id, BusinessNumber);
                 break;
             }
@@ -98,7 +103,38 @@ void doTask() {
             }
 			break;
         }
+        case 4: {
+            switch (menu_level_2) {
+            case 1: {
+                // 채용 정보 검색
+                string CompanyName;
+                cin >> CompanyName;
+                recruitinquiryUI.searchRecruitInfo(CompanyName);
+                break;
+            }
+            case 2: {
+                string BusinessNumber;
+                string Id = activeAccount->getActiveID();
+                ApplyforUI applyforUI;
+                cin >> BusinessNumber;
+                applyforUI.applyforInfo(BusinessNumber, Id);
+                // 채용 정보 지원
+                break;
+            }
+            case 3: {
+                string Id = activeAccount->getActiveID();
+                checkapplyinfoUI.accessApplyInfo(Id);
+                // 지원 정보 조회
+                  break;
+            }
+            default: {
+                is_program_exit = 1;
+                break;
+            }
+            }
+            break;
         }
+    }
     }
 }
 

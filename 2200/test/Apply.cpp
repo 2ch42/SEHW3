@@ -1,26 +1,15 @@
 #include "Apply.h"
 
-vector<Apply> Applylist;
+vector<Apply> Apply::Applylist;
 
-Recruit Apply::getrecruitlist()
+Recruit* Apply::getrecruitlist()
 {
-	return recruitlist;
-}
-
-
-GeneralAccount Apply::getGeneralAccount()
-{
-	return General;
+	return &recruitlist;
 }
 
 void Apply::setrecruitlist(Recruit recruitlist)
 {
 	this->recruitlist = recruitlist;
-}
-
-void Apply::setGeneralAccount(GeneralAccount General)
-{
-	this->General = General;
 }
 
 
@@ -29,9 +18,20 @@ vector<Apply>* Apply::getApplylist()
 	return &Apply::Applylist;
 }
 
-Apply Apply::setApply(Recruit recruitlist, GeneralAccount General)
+Apply Apply::setApply(Recruit recruitlist, string Id)
 {
-	this->recruitlist = recruitlist;
-	this->General = General;
-	return *this;
+	Apply app;
+	app.setrecruitlist(recruitlist);
+	app.setUserId(Id);
+	return app;
+}
+
+void Apply::setUserId(string Id)
+{
+	this->UserId = Id;
+}
+
+string Apply::getUserId()
+{
+	return UserId;
 }

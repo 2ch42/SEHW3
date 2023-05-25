@@ -1,20 +1,27 @@
 #include "CheckApplyInfo.h"
 #include <algorithm>
 
-void CheckApplyInfoUI::accessApplyInfo()
+void CheckApplyInfoUI::accessApplyInfo(string Id)
 {
-	cout << "4.3 지원 정보 조회" << endl;
-	vector<Apply> show = app->showSortedApplyInfo();
-	cout << show.getrecruitlist().getGeneralAccount().getCompanyName() << show.getGeneralAccount().getBusinessNumber() << show.getGeneralAccount().getWork() << show.getGeneralAccount().getNumberOfPeople() << show.getGeneralAccount().getDeadline() << endl;
+	cout << "4.3 show apply" << endl;
+	vector<Apply> show = app->showSortedApplyInfo(Id);
+	for (int i = 0; i < show.size(); i++)
+	{
+		cout << show[i].getrecruitlist()->getCompanyName() << " " << show[i].getrecruitlist()->getBusinessNumber() << " " << show[i].getrecruitlist()->getWork() << " " << show[i].getrecruitlist()->getNumberOfPeople() << " " << show[i].getrecruitlist()->getDeadline() << endl;
+	}
 }
 
-vector<Apply> CheckApplyInfo::showSortedApplyInfo()
+vector<Apply> CheckApplyInfo::showSortedApplyInfo(string Id)
 {
 	vector<Apply>* apply = Apply::getApplylist();
 	vector<Apply> checkedapply;
+	
 	for (int i = 0; i < apply->size(); i++)
 	{
-		checkedapply.push_back((*apply)[i]);
+		if (Id == (*apply)[i].getUserId())
+		{
+			checkedapply.push_back((*apply)[i]);
+		}
 	}
 	sortbyCompanyName(checkedapply);
 	return checkedapply;
@@ -22,7 +29,7 @@ vector<Apply> CheckApplyInfo::showSortedApplyInfo()
 
 bool CompareApply(Apply apply1, Apply apply2)
 {
-	if (apply1.getrecruitlist().getCompanyName() < apply2.getrecruitlist().getCompanyName())
+	if (apply1.getrecruitlist()->getCompanyName() < apply2.getrecruitlist()->getCompanyName())
 		return true;
 	else
 		return false;

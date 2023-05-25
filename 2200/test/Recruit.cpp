@@ -7,7 +7,7 @@ string Recruit::getCompanyName()
 	return CompanyName;
 }
 
-Recruit Recruit::insertNewRecruit(string Work, int NumOfPeople, string Deadline, string CompanyName, string Id, int BusinessNumber)
+Recruit Recruit::insertNewRecruit(string Work, int NumOfPeople, string Deadline, string CompanyName, string Id, string BusinessNumber)
 {
 	Recruit recruit;
 	recruit.setWork(Work);
@@ -25,7 +25,7 @@ string Recruit::getId()
 	return Id;
 }
 
-int Recruit::getBusinessNumber()
+string Recruit::getBusinessNumber()
 {
 	return BusinessNumber;
 }
@@ -56,7 +56,7 @@ void Recruit::setCompanyName(string CompanyName)
 	this->CompanyName = CompanyName;
 }
 
-void Recruit::setBusinessNumber(int BusinessNumber)
+void Recruit::setBusinessNumber(string BusinessNumber)
 {
 	this->BusinessNumber = BusinessNumber;
 }

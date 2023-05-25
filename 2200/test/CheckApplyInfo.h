@@ -4,10 +4,8 @@
 
 class CheckApplyInfo
 {
-private:
-
 public:
-	vector<Apply> showSortedApplyInfo();
+	vector<Apply> showSortedApplyInfo(string Id);
 	void sortbyCompanyName(vector<Apply>& applyList);
 };
 
@@ -18,7 +16,7 @@ private:
 	CheckApplyInfo * app;
 
 public:
-	void accessApplyInfo();
+	void accessApplyInfo(string Id);
 };
 
 

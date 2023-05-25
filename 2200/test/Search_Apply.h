@@ -1,16 +1,16 @@
 #pragma once
 #include "Recruit.h"
+#include <iostream>
 #include "Apply.h"
 
 
 class Recruitinquiry
 {
-private:
-	static vector<Recruit> searchList;
 public:
 	vector<Recruit> searchRecruit(string CompanyName);
 	void sortbyCompanyName(vector<Recruit>& Recruitlist);
-	vector<Recruit>* getList();
+	static vector<Recruit>* getList();
+	static vector<Recruit> searchList;
 };
 
 
@@ -31,8 +31,9 @@ private:
 	static vector<Recruit> searchedList;
 
 public:
-	Apply applyforCompany(int BusinessNumber);
+	Apply applyforCompany(string BusinessNumber, string Id);
 	static vector<Recruit>* getrecruitlist();
+	
 };
 
 class ApplyforUI
@@ -41,6 +42,7 @@ private:
 	Applyfor * apply;
 
 public:
-	void applyforInfo(int BusinessNumber);
+	void applyforInfo(string BusinessNumber, string Id);
 };
+
 

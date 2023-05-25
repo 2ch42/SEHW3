@@ -14,9 +14,13 @@ string CompanyAccount::getBusinessNum(){
 }
 
 string CompanyAccount::getActiveName(){
-  return companyName;
+  return this->companyName;
 }
 
 string CompanyAccount::getActiveNum(){
-  return businessNum;
+  return this->businessNum;
+}
+
+string CompanyAccount::getActiveID(){
+  return this->getUserID();
 }
