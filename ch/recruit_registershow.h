@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include "Recruit.h"
 
 using namespace std;
 
@@ -8,13 +9,11 @@ class Recruit
 {
 	private:
 		string Work;
-		int NumOfPeople = 0;
+		int NumberOfPeople = 0;
 		string Deadline;
 		string CompanyName;
-		string Date;
-		string id;
 		int ApplicantsNum;
-		static vector<Recruit> list;
+		static vector<Recruit> recruitlist;
 	public:
 		static vector<Recruit>* getRecruitDetail();
 		static Recruit	insertNewRecruit(string Work, int NumOfPeople, string Deadline);
@@ -32,13 +31,13 @@ class AddRecruitUI
 	private:
 		AddRecruit* addrecruit = new AddRecruit();
 	public:
-		Recruit addRecruit(string Work, int NumOfPeople, string Deadline);
+		Recruit addRecruit(string Work, int NumberOfPeople, string Deadline);
 };
 
 class AddRecruit
 {
 	public:
-		Recruit addNewRecruit(string Work, int NumOfPeople, string Deadline);
+		Recruit addNewRecruit(string Work, int NumberOfPeople, string Deadline);
 };
 
 class ShowRecruitUI
