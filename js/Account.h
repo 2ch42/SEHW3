@@ -21,7 +21,6 @@ class Account{
     static void addAccount(Account* newAccount);
     static bool signIn(string userID, string password);
     static Account* getActiveAccount();
-    static void deleteAccount();
+    static string deleteAccount();
     static string signOut();
-    ~Account();
 };

@@ -9,5 +9,5 @@ class DeleteAccountUI{
 };
 class DeleteAccount{
   public:
-    static void removeAccount();
+    static string removeAccount();
 };

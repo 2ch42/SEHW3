@@ -35,11 +35,14 @@ void Account::addAccount(Account* newAccount){
   accountList.push_back(newAccount);
 }
 
-void Account::deleteAccount(){
+ string Account::deleteAccount(){
   if(nowActiveAccount != NULL){
+    string userID = nowActiveAccount->getActiveID();
     delete nowActiveAccount;
     nowActiveAccount = NULL;
+    return userID;
   }
+  return "Not logged in.";
 }
 
 string Account::signOut(){
@@ -48,7 +51,7 @@ string Account::signOut(){
     nowActiveAccount = NULL;
     return userID;
   }
-  return "";
+  return "Not logged in.";
 }
 
 Account* Account::getActiveAccount(){
@@ -56,19 +59,16 @@ Account* Account::getActiveAccount(){
 }
 
 string Account::getActiveName(){
-  return "No any name.";
+  return "Not logged in.";
 }
 
 string Account::getActiveNum(){
-  return "No any num.";
+  return "Not logged in.";
 }
 
 string Account::getActiveID(){
-  return this->userID;
-}
-
-
-
-Account::~Account(){
-  cout<<"> " + this->userID<<endl;
+  if(nowActiveAccount != NULL)
+   return this->userID;
+  else
+    return "";
 }

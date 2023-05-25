@@ -3,10 +3,12 @@
 
 using namespace std;
 
-void DeleteAccount::removeAccount(){
-  Account::deleteAccount();
+string DeleteAccount::removeAccount(){
+  string userID = Account::deleteAccount();
+  return userID;
 }
 
 void DeleteAccountUI::requestDelete(){
-  DeleteAccount::removeAccount();
+  string userID = DeleteAccount::removeAccount();
+  cout<<"> "<<userID<<endl;
 }

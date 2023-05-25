@@ -1,13 +1,13 @@
 #include <iostream>
 #include <string>
-#include <fstream>
 #include "SignUp.h"
 #include "SignIn.h"
 #include "Account.h"
 #include "DeleteAccount.h"
 #include "SignOut.h"
+#include "file.h"
 
-#define MAX_STRING 32
+#define MAX_STRING 50
 #define INPUT_FILE_NAME "input.txt"
 #define OUTPUT_FILE_NAME "output.txt"
 
@@ -23,19 +23,23 @@ void doTask(){
   DeleteAccountUI deleteAccountUI;
   SignOutUI signOutUI;
 
+  Account* activeAccount;
+
+  FILE* in_fp = fopen(INPUT_FILE_NAME, "r+");
+  FILE* out_fp = fopen(OUTPUT_FILE_NAME, "w+");
+
   while(!is_program_exit){
     // 입력 파일에서 메뉴 숫자 2개를 읽기
-    cout<<"메뉴 2개 입력>> ";
-    cin>>menu_level_1>>menu_level_2;
+    fscanf(in_fp, "%d %d ", &menu_level_1, &menu_level_2);
 
     switch(menu_level_1){
       case 1:{
         switch(menu_level_2){
           case 1:{
             int typeNum;
-            string a, b, c, d;
-            cin>>typeNum>>a>>b>>c>>d;
-            signUpUI.requestSignUp(typeNum, a, b, c, d);
+            char name[MAX_STRING], num[MAX_STRING], id[MAX_STRING], pw[MAX_STRING];
+            fscanf(in_fp, "%d %s %s %s %s", &typeNum, name, num, id, pw);
+            signUpUI.requestSignUp(typeNum, string(name), string(num), string(id), string(pw));
             break;
           }
           case 2:{
@@ -55,6 +59,7 @@ void doTask(){
             string id, pw;
             cin>>id>>pw;
             signInUI.requestSignIn(id, pw);
+            activeAccount = Account::getActiveAccount();
             break;
           }
           case 2:{
@@ -72,9 +77,6 @@ void doTask(){
 }
 
 int main(){
-
- /*  FILE* in_fp = fopen(INPUT_FILE_NAME, "r+");
-  FILE* out_fp = fopen(OUTPUT_FILE_NAME, "w+"); */
 
   doTask();
 
