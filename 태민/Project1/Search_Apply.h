@@ -2,14 +2,6 @@
 #include "Recruit.h"
 #include "Apply.h"
 
-class RecruitinquiryUI
-{
-private:
-	Recruitinquiry * recruit = new Recruitinquiry();
-
-public:
-	void searchRecruitInfo(string CompanyName);
-};
 
 class Recruitinquiry
 {
@@ -21,14 +13,17 @@ public:
 	vector<Recruit>* getList();
 };
 
-class ApplyforUI
+
+class RecruitinquiryUI
 {
 private:
-	Applyfor * apply;
+	Recruitinquiry * recruit;
 
 public:
-	void applyforInfo(int BusinessNumber);
+	void searchRecruitInfo(string CompanyName);
 };
+
+
 
 class Applyfor
 {
@@ -39,3 +34,13 @@ public:
 	Apply applyforCompany(int BusinessNumber);
 	static vector<Recruit>* getrecruitlist();
 };
+
+class ApplyforUI
+{
+private:
+	Applyfor * apply;
+
+public:
+	void applyforInfo(int BusinessNumber);
+};
+

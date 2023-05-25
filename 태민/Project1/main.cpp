@@ -123,8 +123,8 @@ void join()
 	* 단순히 파일을 통해 입출력하는 방법을 보이기 위한 코드이므로 이 함수에서 그대로 사용하면 안됨.
 	* control boundary class . 및 를 이용해서 해당 기능이 구현되도록 해야 함
 	*/
-	char user_type[MAX_STRING], name[MAX_STRING], SSN[MAX_STRING],
-		address[MAX_STRING], ID[MAX_STRING], password[MAX_STRING];
+	//char user_type[MAX_STRING], name[MAX_STRING], SSN[MAX_STRING],
+	//	address[MAX_STRING], ID[MAX_STRING], password[MAX_STRING];
 	// : , , ID, Password 입력 형식 이름 주민번호 를 파일로부터 읽음
 	//fscanf(in_fp, "%s %s %s %s", name, SSN, ID, password);
 
@@ -140,3 +140,4 @@ void program_exit()
 {
 	//....
 }
+

@@ -14,22 +14,22 @@ vector<Apply> CheckApplyInfo::showSortedApplyInfo()
 	vector<Apply> checkedapply;
 	for (int i = 0; i < apply->size(); i++)
 	{
-		checkedapply.push_back(apply[i]);
+		checkedapply.push_back((*apply)[i]);
 	}
 	sortbyCompanyName(checkedapply);
 	return checkedapply;
 }
 
-void CheckApplyInfo::sortbyCompanyName(vector<Apply>& applyList)
-{
-	sort(applyList.begin(), applyList.end(), Compare);
-	// 회사 이름의 오름차순으로 정렬하여 출력.
-}
-
-bool Compare(Apply apply1, Apply apply2)
+bool CompareApply(Apply apply1, Apply apply2)
 {
 	if (apply1.getrecruitlist().getCompanyName() < apply2.getrecruitlist().getCompanyName())
 		return true;
 	else
 		return false;
+}
+
+void CheckApplyInfo::sortbyCompanyName(vector<Apply>& applyList)
+{
+	sort(applyList.begin(), applyList.end(), CompareApply);
+	// 회사 이름의 오름차순으로 정렬하여 출력.
 }
