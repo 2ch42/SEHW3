@@ -1,33 +1,9 @@
-<mxfile host="Electron" modified="2023-05-24T09:33:22.002Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="kItyVJiDzJ4OxPHRUTl5" version="21.1.2" type="device">
+<mxfile host="Electron" modified="2023-05-25T20:59:52.921Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="cgCMQBO1Ev3x40FhRYKC" version="21.1.2" type="device">
   <diagram name="Page-1" id="b5b7bab2-c9e2-2cf4-8b2a-24fd1a2a6d21">
     <mxGraphModel dx="554" dy="645" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="THvIdB2N3yqFJeVhvD4z-1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;채용 정보 관리 시스템&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;div style=&quot;height:2px;&quot;&gt;&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="165" y="20" width="265" height="250" as="geometry" />
-        </mxCell>
-        <mxCell id="THvIdB2N3yqFJeVhvD4z-2" value="회사 회원" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
-          <mxGeometry x="25" y="160" width="30" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="THvIdB2N3yqFJeVhvD4z-3" value="채용 정보 등록" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="215" y="70" width="140" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="THvIdB2N3yqFJeVhvD4z-6" value="채용 정보 수정" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="215" y="160" width="140" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="THvIdB2N3yqFJeVhvD4z-10" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.75;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="THvIdB2N3yqFJeVhvD4z-2" target="THvIdB2N3yqFJeVhvD4z-3" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="5" y="100" as="sourcePoint" />
-            <mxPoint x="55" y="50" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="THvIdB2N3yqFJeVhvD4z-11" value="" style="endArrow=none;html=1;rounded=0;entryX=0.007;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="THvIdB2N3yqFJeVhvD4z-2" target="THvIdB2N3yqFJeVhvD4z-6" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="25" y="304" as="sourcePoint" />
-            <mxPoint x="192" y="440" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="_EsRxaXNr39jAv2G4_3R-1" value="회사 회원" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
           <mxGeometry x="75" y="395" width="30" height="60" as="geometry" />
         </mxCell>
@@ -68,16 +44,13 @@
         <mxCell id="K71paMH0ZI0jcNfA3QA--1" value=":Recruit" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="310" y="835" width="140" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="K71paMH0ZI0jcNfA3QA--6" value="1. startInterface()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="100" y="645" width="110" height="30" as="geometry" />
-        </mxCell>
         <mxCell id="K71paMH0ZI0jcNfA3QA--7" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="220" y="695" as="sourcePoint" />
             <mxPoint x="220" y="625" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="K71paMH0ZI0jcNfA3QA--8" value="2. addRecruit()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+        <mxCell id="K71paMH0ZI0jcNfA3QA--8" value="1. addRecruit()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="160" y="460" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="K71paMH0ZI0jcNfA3QA--27" value="회사 회원" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
@@ -126,20 +99,17 @@
             <mxPoint x="805" y="632.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="K71paMH0ZI0jcNfA3QA--41" value="1. startInterface()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="625" y="642.5" width="110" height="30" as="geometry" />
-        </mxCell>
         <mxCell id="K71paMH0ZI0jcNfA3QA--42" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="745" y="692.5" as="sourcePoint" />
             <mxPoint x="745" y="622.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="K71paMH0ZI0jcNfA3QA--43" value="2. showRecruit()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+        <mxCell id="K71paMH0ZI0jcNfA3QA--43" value="1. showRecruit()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="685" y="437.5" width="110" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="K71paMH0ZI0jcNfA3QA--61" value="2.1.1 : getRecruitdetail()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="860" y="770.5" width="150" height="30" as="geometry" />
+        <mxCell id="K71paMH0ZI0jcNfA3QA--61" value="1.1.1 : getrecruitlist()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="870" y="770.5" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="K71paMH0ZI0jcNfA3QA--260" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -154,7 +124,7 @@
             <mxPoint x="194" y="786" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="EixyRkAgwoJFA63Q9zNU-70" value="2.1.1 insertNewRecruit()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+        <mxCell id="EixyRkAgwoJFA63Q9zNU-70" value="1.1.1 insertNewRecruit()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="280.5" y="790" width="150" height="30" as="geometry" />
         </mxCell>
         <mxCell id="OpeE6zxOzzpMG_I_0L6V-6" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.925;exitY=1.058;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="bZW9feNbAllSj9TjUGjz-1" target="K71paMH0ZI0jcNfA3QA--1" edge="1">
@@ -163,10 +133,10 @@
             <mxPoint x="140" y="825" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZU0NuVu_DH9FHkmJMMa6-1" value="2.1 addNewRecruit()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+        <mxCell id="ZU0NuVu_DH9FHkmJMMa6-1" value="1.1 addNewRecruit()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="270" y="642.5" width="130" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZU0NuVu_DH9FHkmJMMa6-2" value="2.1 showRecruitDetail()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+        <mxCell id="ZU0NuVu_DH9FHkmJMMa6-2" value="1.1 showRecruitDetail()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="790" y="642.5" width="150" height="30" as="geometry" />
         </mxCell>
       </root>
