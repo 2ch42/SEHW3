@@ -1,0 +1,20 @@
+1.1. signUp
+hankook 3456 hk pwd1
+2.1. signIn
+hk pwd1
+3.1. registered
+> accounting 2 2023/05/26
+3.2. show
+> accounting 2 2023/05/26
+2.2. signOut
+> hk
+1.1. signUp
+hong 98765 hn pwd2
+2.1. signIn
+hn pwd2
+4.1 search
+> hankook 3456 accounting 2 2023/05/26
+4.2 apply
+> hankook 3456 accounting
+4.3. show apply
+> hankook 3456 accounting 2 2023/05/26

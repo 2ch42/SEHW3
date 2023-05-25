@@ -6,8 +6,7 @@
 // 지원 정보를 조회하기위한 UI로 지원 정보 조회 Control로부터 지원 정보 리스트를 받아 출력한다.
 void CheckApplyInfoUI::accessApplyInfo(string Id)
 {
-	fprintf(out_fp, "4.3 show apply\n");
-	cout << "4.3 show apply" << endl;
+	fprintf(out_fp, "4.3. show apply\n");
 	vector<Apply> show = app->showSortedApplyInfo(Id);
 	for (int i = 0; i < show.size(); i++)
 	{
