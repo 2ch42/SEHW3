@@ -51,6 +51,23 @@ string Account::signOut(){
   return "";
 }
 
+Account* Account::getActiveAccount(){
+  return nowActiveAccount;
+}
+
+string Account::getActiveName(){
+  return "No any name.";
+}
+
+string Account::getActiveNum(){
+  return "No any num.";
+}
+
+string Account::getActiveID(){
+  return this->userID;
+}
+
+
 
 Account::~Account(){
   cout<<"> " + this->userID<<endl;

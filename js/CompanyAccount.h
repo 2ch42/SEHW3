@@ -12,9 +12,7 @@ class CompanyAccount : public Account{
     CompanyAccount(string companyName, string businessNum, string userID, string password);
     string getCompanyName();
     string getBusinessNum();
-/*     virtual string getActiveName();
+    virtual string getActiveName();
     virtual string getActiveNum();
     virtual string getActiveID();
-    virtual string getActivePW(); */
-
 };

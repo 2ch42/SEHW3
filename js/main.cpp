@@ -23,7 +23,6 @@ void doTask(){
   DeleteAccountUI deleteAccountUI;
   SignOutUI signOutUI;
 
-
   while(!is_program_exit){
     // 입력 파일에서 메뉴 숫자 2개를 읽기
     cout<<"메뉴 2개 입력>> ";

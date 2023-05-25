@@ -15,7 +15,7 @@ string GeneralAccount::getRegNum(){
   return this->regNum;
 }
 
-/* string GeneralAccount::getActiveName(){
+string GeneralAccount::getActiveName(){
   return this->name;
 }
 
@@ -24,9 +24,5 @@ string GeneralAccount::getActiveNum(){
 }
 
 string GeneralAccount::getActiveID(){
-  return getUserID();
+  return this->getUserID();
 }
-
-string GeneralAccount::getActivePW(){
-  return getPassword();
-} */
