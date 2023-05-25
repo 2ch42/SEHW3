@@ -12,9 +12,9 @@ Recruit AddRecruit::addNewRecruit(string Work, int NumOfPeople, string Deadline,
 //채용 정보 등록 시, 필요한 인자들을 받아 새로운 Recruit를 생성하는 함수.
 void AddRecruitUI::addRecruit(string Work, int NumOfPeople, string Deadline, string CompanyName, string Id, string BusinessNumber)
 {
-	fprintf(out_fp, "3.1. registered"\n);
+	fprintf(out_fp, "3.1. registered\n");
 	Recruit recruit = addrecruit->addNewRecruit(Work, NumOfPeople, Deadline, CompanyName, Id, BusinessNumber);
-	fprintf(out_fp, "> %s %d %s\n", Work, NumOfPeople, Deadline)
+	fprintf(out_fp, "> %s %d %s\n", Work.c_str(), NumOfPeople.c_str(), Deadline.c_str());
 }
 
 //채용 정보 조회 시, 채용 정보 리스트를 반환하는 함수.
@@ -36,6 +36,6 @@ void ShowRecruitUI::showRecruit()
 	fprintf(out_fp, "3.2. show\n");
 	for (Recruit recru : temp)
 	{
-		fprintf(out_fp, "> %s %d %s\n", recru.getWork(), recru.getNumberOfPeople(), recru.getDeadline());
+		fprintf(out_fp, "> %s %d %s\n", recru.getWork().c_str(), recru.getNumberOfPeople(), recru.getDeadline().c_str());
 	}
 }
