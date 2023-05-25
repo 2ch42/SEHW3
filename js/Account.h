@@ -10,14 +10,16 @@ class Account{
     string userID;
     string password;
     static vector<Account*> accountList;
-  protected:
+  public:
     static Account* nowActiveAccount;
   public:
     Account(string userID, string password);
     string getUserID();
     string getPassword();
-    virtual string getActiveName();
+    /* virtual string getActiveName();
     virtual string getActiveNum();
+    virtual string getActiveID();
+    virtual string getActivePW(); */
     static void addAccount(Account* newAccount);
     static bool signIn(string userID, string password);
     void activeAccount();

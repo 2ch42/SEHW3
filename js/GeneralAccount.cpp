@@ -15,10 +15,18 @@ string GeneralAccount::getRegNum(){
   return this->regNum;
 }
 
-string GeneralAccount::getActiveName(){
-  return name;
+/* string GeneralAccount::getActiveName(){
+  return this->name;
 }
 
 string GeneralAccount::getActiveNum(){
-  return regNum;
+  return this->regNum;
 }
+
+string GeneralAccount::getActiveID(){
+  return getUserID();
+}
+
+string GeneralAccount::getActivePW(){
+  return getPassword();
+} */

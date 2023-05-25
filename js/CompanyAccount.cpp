@@ -13,10 +13,18 @@ string CompanyAccount::getBusinessNum(){
   return businessNum;
 }
 
-string CompanyAccount::getActiveName(){
+/* string CompanyAccount::getActiveName(){
   return companyName;
 }
 
 string CompanyAccount::getActiveNum(){
   return businessNum;
 }
+
+string CompanyAccount::getActiveID(){
+  return getUserID();
+}
+
+string CompanyAccount::getActivePW(){
+  return getPassword();
+} */

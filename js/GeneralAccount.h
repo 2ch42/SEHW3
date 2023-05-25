@@ -12,6 +12,8 @@ class GeneralAccount : public Account{
     GeneralAccount(string name, string regNum, string userID, string password);
     string getName();
     string getRegNum();
-    virtual string getActiveName();
+    /* virtual string getActiveName();
     virtual string getActiveNum();
+    virtual string getActiveID();
+    virtual string getActivePW(); */
 };
