@@ -4,6 +4,7 @@
 #include "GeneralAccount.h"
 #include "Account.h"
 #include <string>
+#include "file.h"
 
 using namespace std;
 
@@ -25,5 +26,6 @@ void SignUp::createNewAccount(int typeNum, string name, string num, string userI
 // 사용자로부터 정보를 입력 받아 인자를 control class에 전달하고 계정이 생성된 후 정보를 화면에 출력한다.
 void SignUpUI::requestSignUp(int typeNum, string name, string num, string userID, string password){
   SignUp::createNewAccount(typeNum, name, num, userID, password);
-  cout<<"> " + name + " " + num + " " + userID + " " + password<<endl;
+  fprintf(out_fp, "1.1. signUp\n");
+  fprintf(out_fp, "%s %s %s %s %s\n", "> ", name, num, userID, password);
 }

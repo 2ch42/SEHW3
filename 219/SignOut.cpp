@@ -1,5 +1,6 @@
 #include "SignOut.h"
 #include "Account.h"
+#include "file.h"
 
 using namespace std;
 
@@ -12,5 +13,6 @@ string SignOut::disconnectAccount(){
 // 사용자로부터 로그아웃 요청을 받아 로그아웃 결과를 화면에 출력한다.
 void SignOutUI::requestSignOut(){
   string userID = SignOut::disconnectAccount();
-  cout<<"> " + userID<<endl;
+  fprintf(out_fp, "1.2. signOut\n");
+  fprintf(out_fp, "%s %s", "> ", "userID");
 }

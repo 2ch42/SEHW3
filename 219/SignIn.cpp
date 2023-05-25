@@ -2,6 +2,7 @@
 #include "Account.h"
 #include <string>
 #include <iostream>
+#include "file.h"
 
 using namespace std;
 
@@ -15,7 +16,8 @@ bool SignIn::verifyAccount(string userID, string password){
 
 // 로그인 후 결과를 화면에 출력한다.
 void SignInUI::showHomeScreen(string userID, string password){
-  cout<<"> "<<userID<<" "<<password<<endl;
+    fprintf("2.1. signIn\n");
+    fprintf(out_fp, "%s %s %s\n", "> ", userID, password);
 }
 
 // 사용자로부터 ID와 PW를 입력 받아 로그인 요청을 한다.

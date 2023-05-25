@@ -1,5 +1,6 @@
 #include "DeleteAccount.h"
 #include "Account.h"
+#include "file.h"
 
 using namespace std;
 
@@ -12,5 +13,6 @@ string DeleteAccount::removeAccount(){
 //로그인 된 회원으로부터 회원 탈퇴 요청을 받아 삭제 후 결과를 출력한다.
 void DeleteAccountUI::requestDelete(){
   string userID = DeleteAccount::removeAccount();
-  cout<<"> "<<userID<<endl;
+  fprintf(out_fp, "1.2. deleteAccount\n");
+  fprintf(out_fp, "%s %s\n", "> ", userID);
 }

@@ -1,6 +1,8 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <string>
+#include <cstdio>
+#include "file.h"
 #include "SignUp.h"
 #include "SignIn.h"
 #include "Account.h"
@@ -11,9 +13,9 @@
 #include "recruit_registershow.h"
 #include "Search_Apply.h"
 #include "CheckApplyInfo.h"
-#include "file.h"
 
 #define MAX_STRING 32
+
 
 
 using namespace std;
@@ -35,8 +37,7 @@ void doTask() {
 
     while (!is_program_exit) {
         // 입력 파일에서 메뉴 숫자 2개를 읽기
-        cout << "insert 2 ";
-        cin >> menu_level_1 >> menu_level_2;
+        fscanf(in_fp, "%d %d", &menu_level_1, &menu_level_2);
 
         switch (menu_level_1) {
         case 1: {

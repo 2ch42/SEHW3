@@ -11,7 +11,7 @@ void CheckApplyInfoUI::accessApplyInfo(string Id)
 	vector<Apply> show = app->showSortedApplyInfo(Id);
 	for (int i = 0; i < show.size(); i++)
 	{
-		fprintf(out_fp, "%s %s %s %d %s\n", show[i].getrecruitlist()->getCompanyName().c_str(), show[i].getrecruitlist()->getBusinessNumber().c_str(), show[i].getrecruitlist()->getWork().c_str(), show[i].getrecruitlist()->getNumberOfPeople(), show[i].getrecruitlist()->getDeadline().c_str());
+		fprintf(out_fp, "> %s %s %s %d %s\n", show[i].getrecruitlist()->getCompanyName().c_str(), show[i].getrecruitlist()->getBusinessNumber().c_str(), show[i].getrecruitlist()->getWork().c_str(), show[i].getrecruitlist()->getNumberOfPeople(), show[i].getrecruitlist()->getDeadline().c_str());
 	}
 }
 
